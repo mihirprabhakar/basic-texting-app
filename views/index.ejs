@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>all chats</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <h2>All Chats </h2>
@@ -17,9 +17,18 @@
             <p>From :<%=chat.from%></p>
             <div class="msg">
                 <p>message :<%=chat.msg%></p>
+                <br>
+                <form action="/chats/<%=chat._id %>/edit" method="get" >
+                    <button>Edit Message</button>
+                </form>
+                <form action="/chats/<%= chat._id %>?_method=DELETE" method="post">
+                    <button>Delete Message</button>
+                </form>
             </div>
             <p>Recieved by :<%=chat.to%></p>
             <!-- <hr> -->
+            <p>Date: <%=chat.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+            <p>Time: <%=chat.created_at.toString().split(" ")[4] %></p>
         </div>
     <%}%>
     

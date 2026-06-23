@@ -1,51 +1,88 @@
-body {
+/* Reset */
+*{
     margin: 0;
-    padding: 30px;
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+/* Body */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    padding: 30px;
+}
+
+/* Heading */
+h2{
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-.chat {
-    background: white;
-    max-width: 600px;
+/* New Chat Button Container */
+form{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+button{
+    background: linear-gradient(135deg, #ae02ae, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(177, 5, 142, 0.3);
+}
+
+button:active{
+    transform: translateY(0);
+}
+
+/* Chat Card */
+.chat{
+    max-width: 700px;
     margin: 20px auto;
-    padding: 20px;
+    background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s ease;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
-.chat:hover {
+.chat:hover{
     transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.chat p {
+/* Sender & Receiver */
+.chat p{
     margin: 8px 0;
     color: #444;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-.msg {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+/* Message Box */
+.msg{
+    background: #667eea;
+    color: white;
     padding: 15px;
-    border-radius: 15px;
-    margin: 15px 0;
-    color: white;
-    font-size: 17px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    margin: 12px 0;
+    word-wrap: break-word;
 }
 
-.msg p {
+.msg p{
+    color: white;
     margin: 0;
-    color: white;
-}
-
-.label {
-    font-weight: bold;
-    color: #222;
+    font-size: 16px;
 }
